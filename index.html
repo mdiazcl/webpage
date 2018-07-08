@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 .ul-2cols {
@@ -13,6 +14,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   -webkit-columns: 2;
   -moz-columns: 2;
 }
+.invert { filter: invert(100%); }
 </style>
 <body class="w3-dark-grey">
 
@@ -95,6 +97,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
     <!-- Right Column -->
     <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom" style="display: none"><!-- Im not hidding anything... but its not ready for public yet... -->
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-link fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Useful links</h2>
+          <p>
+            <a href="https://tools.mdiazlira.com"><input type="button" class="w3-button w3-green" value="Misc Tools" /></a>
+          </p>
+      </div>
+
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user-secret fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Security Talks</h2>
           <p>
@@ -229,7 +238,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </div>
 
 <footer class="w3-container w3-black w3-center w3-margin-top">
-  <p>There is no footer :)</p>
+  <p><img src="cake.png" width="40px;" class="invert"/></p>
+  <p>The footer is a lie :)</p>
 </footer>
 
 </body>
