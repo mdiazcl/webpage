@@ -19,7 +19,12 @@
 Te aconsejo correr esto en una máquina virtual con Linux, no tengo experiencia corriendo las herramientas en entornos Windows. Según la página de <a href="https://www.elastic.co/">https://www.elastic.co/</a> todo debería funcionar, sin embargo si tienes problemas, intentaré ayudarte! Pero no prometo nada.</p>
 <p><strong>Si usarás otra distribución de Linux</strong><br>
 Si utilizarás alguna otra distribución de Linux, tan solo realiza los cambios de los comandosp por los que pertenecen a ese sistemas operativo. Los comandos que usaremos son bastante nativos por lo que no deberían haber muchos problemas.</p>
-<h2><a id="Instalacin_de_herramientas_28"></a>Instalación de herramientas</h2>
+<h2><a id="OVA_para_Virtualbox_27"></a>OVA para Virtualbox</h2>
+<hr>
+<p>Gracias al grandioso aporte de Felipe Castañeda tenemos disponible una OVA para Virtualbox con la máquina lista para el laboratorio! Si no puedes instalar las herramientas descarga este archivo e importalo a tu Virtualbox.</p>
+<p><a href="https://drive.google.com/file/d/1fOxPpfA6Yipidhwp-dh6IbbHOcCEXlH8/view">https://drive.google.com/file/d/1fOxPpfA6Yipidhwp-dh6IbbHOcCEXlH8/view</a></p>
+<p>Si quiereas realizar la instalación tu mismo, continúa con esta guía.</p>
+<h2><a id="Instalacin_de_herramientas_35"></a>Instalación de herramientas</h2>
 <hr>
 <p>Para este laboratorio utilizaremos 5 herramientas!</p>
 <ul>
@@ -36,7 +41,7 @@ Si utilizarás alguna otra distribución de Linux, tan solo realiza los cambios 
 </code></pre>
 <p>La empresa <a href="http://Elastic.co">Elastic.co</a> recomienda tener instalada la versión <strong>1.8.0_131</strong> o superior, ya que el programa reclamará si no tienes la versión suficiente. Si no la tienes instalada te recomienda descargarla e instalarla <a href="https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html">directamente del sitio de Java</a>.</p>
 <p>Una vez que la versión de java está comprobada y lista, descarguemos los ejecutables directamente desde la página de Elastic.</p>
-<h2><a id="Instalacin_de_OpenJDK_8_53"></a>Instalación de OpenJDK 8**</h2>
+<h2><a id="Instalacin_de_OpenJDK_8_59"></a>Instalación de OpenJDK 8**</h2>
 <hr>
 <p><strong>(Gracias Felipe Castañeda por el aporte!)</strong><br>
 Java 8 es la versión actual de soporte a largo plazo y aún es ampliamente compatible, aunque el mantenimiento público finaliza en enero de 2019. Para instalar OpenJDK 8, ejecute el siguiente comando:</p>
@@ -53,7 +58,7 @@ OpenJDK 64-Bit Server VM (build 25.162-b12, mixed mode)
 <hr>
 <p><strong>Importante:</strong> para los usuarios de ubuntu están disponibles los paquetes de Debian .DEB (incluso lo puedes instalar vía APT), sin embargo <strong>no te recomiendo seguir este método</strong> a menos que tengas experiencia, ya que es mas facil manejar todo directamente desde la carpeta en la que descomprimiremos todo!</p>
 <hr>
-<h2><a id="Instalacin_del_Stack_ELK_78"></a>Instalación del Stack ELK</h2>
+<h2><a id="Instalacin_del_Stack_ELK_84"></a>Instalación del Stack ELK</h2>
 <p>Crear una carpeta para almacenar todas las descargas y descargar lo necesario.</p>
 <pre><code class="language-bash">mkdir ~/elk/
 <span class="hljs-built_in">cd</span> ~/elk/
@@ -79,10 +84,10 @@ vim jvm.options
 <span class="hljs-deletion">-Xmx1g   # cambiar por -Xmx4g</span>
 </code></pre>
 <p>Con esto deberia estár listo una instalación básica de Elasticsearch!</p>
-<h2><a id="Corriendo_las_herramientas_115"></a>Corriendo las herramientas</h2>
+<h2><a id="Corriendo_las_herramientas_121"></a>Corriendo las herramientas</h2>
 <hr>
 <p>Con lo anterior, todo deberia estar en orden! Revisemos y ejecutemos las herramientas. Para hacerlo, abre 3 terminales distintos (o usa Tmux si sabes usarlo!).</p>
-<h3><a id="Ejecutando_Elasticsearch_119"></a>Ejecutando Elasticsearch</h3>
+<h3><a id="Ejecutando_Elasticsearch_125"></a>Ejecutando Elasticsearch</h3>
 <p>Ubicate en la carpeta de Elasticsearch y ejecuta el software.</p>
 <pre><code class="language-bash"><span class="hljs-built_in">cd</span> ~/elk/elasticsearch-<span class="hljs-number">6.4</span>.<span class="hljs-number">2</span>/bin
 ./elasticsearch
@@ -110,7 +115,7 @@ vim jvm.options
 </span>}
 </code></pre>
 <p>Listo! <strong>No cierres este terminal.</strong></p>
-<h3><a id="Ejecutando_Kibana_157"></a>Ejecutando Kibana</h3>
+<h3><a id="Ejecutando_Kibana_163"></a>Ejecutando Kibana</h3>
 <p>Ubícate en la carpeta de Kibana y ejecuta el software.</p>
 <pre><code class="language-bash"><span class="hljs-built_in">cd</span> ~/elk/kibana-<span class="hljs-number">6.4</span>.<span class="hljs-number">2</span>-linux-x86_64/bin
 ./kibana
@@ -120,7 +125,7 @@ vim jvm.options
 </code></pre>
 <p>Sin embargo, si resulta todo bien, deberiamos tener el Kibana corriendo en el puerto 5601! Entra al siguente enlace para comprobar: <a href="http://127.0.0.1:5601">http://127.0.0.1:5601</a> y debería mostrar la interfaz de Kibana! Asegurate que no haya ningún error!</p>
 <p>Tampoco cierres el terminal!</p>
-<h3><a id="Ejecutando_Logstash_176"></a>Ejecutando Logstash</h3>
+<h3><a id="Ejecutando_Logstash_182"></a>Ejecutando Logstash</h3>
 <pre><code class="language-bash"><span class="hljs-built_in">cd</span> ~/elk/logstash-<span class="hljs-number">6.4</span>.<span class="hljs-number">2</span>/bin
 ./logstash
 </code></pre>
@@ -128,7 +133,7 @@ vim jvm.options
 <pre><code>ERROR: Pipelines YAML file is empty.
 </code></pre>
 <p>Con esto deberias tener todo listo y corriendo para el taller!</p>
-<h2><a id="Dudas_191"></a>Dudas?</h2>
+<h2><a id="Dudas_197"></a>Dudas?</h2>
 <hr>
 <p>Recuerda que si tienes dudas o algo no te resulta estaré dando apoyo a los asistentes durante la semana previa al laboratorio! Me ubican en Telegram o Twitter.</p>
 <p>@mdiazcl</p>

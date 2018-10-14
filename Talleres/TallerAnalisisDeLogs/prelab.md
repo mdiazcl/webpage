@@ -25,11 +25,17 @@ Te aconsejo correr esto en una máquina virtual con Linux, no tengo experiencia 
 **Si usarás otra distribución de Linux**
 Si utilizarás alguna otra distribución de Linux, tan solo realiza los cambios de los comandosp por los que pertenecen a ese sistemas operativo. Los comandos que usaremos son bastante nativos por lo que no deberían haber muchos problemas.
 
+## OVA para Virtualbox
+---
+Gracias al grandioso aporte de Felipe Castañeda tenemos disponible una OVA para Virtualbox con la máquina lista para el laboratorio! Si no puedes instalar las herramientas descarga este archivo e importalo a tu Virtualbox.
+
+https://drive.google.com/file/d/1fOxPpfA6Yipidhwp-dh6IbbHOcCEXlH8/view
+
+Si quiereas realizar la instalación tu mismo, continúa con esta guía.
 
 ## Instalación de herramientas
 ---
 Para este laboratorio utilizaremos 5 herramientas!
-
 * **ElasticSearch v6** - Una base de datos tipo Full-text Search
 * **Kibana v6** - Un visualizador de datos
 * **Logstash v6** - Un normalizador/preparador de datos
