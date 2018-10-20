@@ -30,9 +30,9 @@ path =&gt; &quot;/tmp/logs/http.log&quot;
 <pre><code class="language-bash"><span class="hljs-built_in">cd</span> &lt;directorio elasticsearch&gt;
 bin/elasticsearch
 </code></pre>
-<h1><a id="6_Cargar_los_datos_41"></a>6.- Cargar los datos</h1>
-<pre><code>cd /tmp/logs
-logstash -f ls.conf
+<h1><a id="6_Cargar_los_datos_con_Logstash_41"></a>6.- Cargar los datos con Logstash</h1>
+<pre><code>cd /home/ubuntu18/elk/logstash-6.4.2-linux-x86_64/
+bin/logstash -f /tmp/logs/ls.conf
 </code></pre>
 <h1><a id="Esperar_horas_47"></a>Esperar horas…</h1>
 

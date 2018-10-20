@@ -39,10 +39,10 @@ cd <directorio elasticsearch>
 bin/elasticsearch
 ```
 
-# 6.- Cargar los datos
+# 6.- Cargar los datos con Logstash
 ```
-cd /tmp/logs
-logstash -f ls.conf
+cd /home/ubuntu18/elk/logstash-6.4.2-linux-x86_64/
+bin/logstash -f /tmp/logs/ls.conf
 ```
 
 # Esperar horas....
