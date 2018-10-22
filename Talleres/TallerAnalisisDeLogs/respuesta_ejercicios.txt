@@ -1,0 +1,44 @@
+Respuestas
+---
+Ejercicio 1:
+	- ¿Cual fue la IP de Origen que generó más tráfico?
+		> 192.168.203.63
+	- ¿Cuál fue el User-Agent más utilizado?
+		> DirBuster-0.12 (http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project)
+	- ¿Cuál fue el recurso más solicitado?
+		> /main.php
+	- ¿Cuál fue la respuesta más común del servidor? ¿Qué podemos concluir de esto?
+		> Error 404 - Not Found
+		> 
+
+
+Ejercicio 2:
+	- ¿Qué dirección IP utilizó satisfactoriamente la Shell?
+		> 192.168.202.110
+	- ¿Cuál fue el primer momento en que la Shell fue accedida?
+		> March 16th 2012, 10:22:25.480
+	- ¿En qué URL encontró la Shell el usuario?
+		> /main/c99.php
+	- ¿Existen más ubicaciones donde la Shell esté presente?¿Cuáles?
+		> Revisar con 200 OK, Pantalla Recurso Solicitado
+
+
+Ejercicio 3:
+	- ¿En qué ubicaciones?
+		> Revisar con 200 OK, Pantalla Recurso Solicitado
+	- ¿Se llevó algún archivo ejecutable (Mimetype: application/x-dosexec)?
+		> Sí,
+	- ¿Cuándo?
+		> March 16th 2012, 16:03:53.660
+	- ¿Quién más descargo este ejecutable?
+		> 192.168.202.118
+		> 192.168.202.98
+
+Ejercicio 4:
+	- ¿Qué herramienta utilizó? Nombre dos.
+		> Nessus
+		> Dirbuster
+	- ¿Alguien más utilizó estas herramientas?
+		> 192.168.203.63
+	- Utilizando el spider, cuantas URL encontró satisfactoriamente?
+		> 10
