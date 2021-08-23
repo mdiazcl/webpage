@@ -15,7 +15,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   -moz-columns: 2;
 }
 .invert { filter: invert(100%); }
+#more {display: none;}
 </style>
+<script>
+  var hidden = true;
+  function moreTalks() {
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("moretalks");
+
+    if (hidden) {
+      moreText.style.display = "inline";
+      btnText.innerHTML = "-- Hide Talks --";
+    } else {
+      btnText.innerHTML = "-- More Talks --";
+      moreText.style.display = "none";
+    }
+
+    hidden = !hidden;
+  } 
+</script>
 <body class="w3-dark-grey">
 
 <!-- Page Container -->
@@ -29,14 +47,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
-          <img src="fotocv3.jpg" style="width:100%" alt="Avatar">
+          <img src="fotocv2.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
             <h2><span class="w3-text-white">Miguel Díaz - @MDiazCL<span></h2>
           </div>
         </div>
         <div class="w3-container">
           <p><i class="fa fa-user fa-fw w3-margin-right w3-large w3-text-black"></i>Miguel Díaz Lira - @mdiazcl</p>
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i>Cybersecurity Manager at Cybertrust.cl</p>
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-black"></i>Cyber Security Engineer at Cornershop LLD</p>
           <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-indigo"></i>Santiago, CL</p>
           <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-indigo"></i>miguel.diaz@mdiazlira.com</p>
           <hr>
@@ -49,7 +67,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-indigo"></i>Social</b></p>
             <p><i class="fa fa-github w3-hover-opacity"></i> <b>Github:</b> <a href="https://github.com/mdiazcl">github.com/mdiazcl</a></p>
             <p><i class="fa fa-twitter w3-hover-opacity"></i> <b>Twitter:</b> <a href="https://twitter.com/mdiazcl">@mdiazcl</a></p>
-            <p><i class="fa fa-telegram w3-hover-opacity"></i> <b>Telegram:</b> @mdiazcl </p>
+            <p><i class="fa fa-telegram w3-hover-opacity"></i> <b>Telegram:</b> &lt;Send me and email&gt; </p>
+            <p><i class="fa fa-linkedin w3-hover-opacity"></i> <b>:</b> <a target="_blank" href="https://www.linkedin.com/in/mdiazcl/">LinkedIn</a> </p>
           <p>
           <hr>
 
@@ -60,6 +79,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             <b>Certifications:</b>
             <ul>
               <li>Certified Ethical Hacker (EC-Council CEH|v8)</li>
+              <li>Certified Incident Handler (EC-Council CIH|v2)</li>
               <li>ISO 9001 - Internal Auditor</li>
               <li>Qualys Certifications</li>
               <li>Tenable Certifications</li>
@@ -77,7 +97,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-indigo"></i>Skills</b></p>
-          <p>Security, Ethical Hacking, Incident Response, Project Management, Engineering, Python</p>
+          <p>Security, Ethical Hacking, Incident Response, Project Management, Engineering, Python, DataScience</p>
           <hr>
 
           <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-indigo"></i>Languages</b></p>
@@ -108,50 +128,61 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user-secret fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Security Talks</h2>
           <p>
-            <b>Ask <a href="mailto:miguel.diaz@mdiazlira.com">here</a> for slides and references or <a href="https://github.com/mdiazcl/talks">check my github repo!</a>.</b>
+            <b>Ask <a href="mailto:miguel.diaz@mdiazlira.com">here</a> for slides and references or <a target="_blank" href="https://github.com/mdiazcl/talks">check my github repo!</a>.</b>
             <ul>
-			  <li><b>Oct 19, 2019</b> - UniversiHack (Chile) - Trabajando en Ciberseguridad</li>
-			  <li><b>Oct 17, 2019</b> - Infoeduca (UTFSM) - Entendiendo un Ciberataque</li>
-			  <li><b>Oct 10, 2019</b> - ENAP - Thinking as a Cybercriminal (Prepare yourself)</li>
-			  <li><b>Aug 28, 2019</b> - DUOC Maipu (Chile) - Trabajando en Ciberseguridad (Charla para Alumnos)</li>
-			  <li><b>Aug 14, 2019</b> - ISC2 (Chile) - Una visión proactiva de ciberdefensa</li>
-			  <li><b>Jul 18, 2019</b> - SummIT DUOC (Chile) - Threat Hunting, un enfoque proactivo de ciberdefensa, Reloaded!</li>
-			  <li><b>Jul 05, 2019</b> - CISOSummit (Perú) - Threat Hunting, un enfoque proactivo de ciberdefensa</li>
-			  <li><b>May 09, 2019</b> - 8vo Congreso de CyberSecurity Bank & Government (Perú) - Emotet, la amenaza despues del phishing</li>
-			  <li><b>Apr 02, 2019</b> - Entel Talks - Emotet, la amenaza despues del phishing</li>
+              <li><b>Oct 19, 2019</b> - UniversiHack (Chile) - Trabajando en Ciberseguridad</li>
+              <li><b>Oct 17, 2019</b> - Infoeduca (UTFSM) - Entendiendo un Ciberataque</li>
+              <li><b>Oct 10, 2019</b> - ENAP - Thinking as a Cybercriminal (Prepare yourself)</li>
+              <li><b>Aug 28, 2019</b> - DUOC Maipu (Chile) - Trabajando en Ciberseguridad (Charla para Alumnos)</li>
+              <li><b>Aug 14, 2019</b> - ISC2 (Chile) - Una visión proactiva de ciberdefensa</li>
+            </ul>
+        <span id="more">
+          <ul>
+			    <li><b>Jul 18, 2019</b> - SummIT DUOC (Chile) - Threat Hunting, un enfoque proactivo de ciberdefensa, Reloaded!</li>
+			    <li><b>Jul 05, 2019</b> - CISOSummit (Perú) - Threat Hunting, un enfoque proactivo de ciberdefensa</li>
+			    <li><b>May 09, 2019</b> - 8vo Congreso de CyberSecurity Bank & Government (Perú) - Emotet, la amenaza despues del phishing</li>
+			    <li><b>Apr 02, 2019</b> - Entel Talks - Emotet, la amenaza despues del phishing</li>
 		      <li><b>Dec 14, 2018</b> - Incofin.cl - Live Social Enginnering Attacks</li>
 		      <li><b>Nov 29, 2018</b> - ENAP - Live Social Enginnering Attacks</li>
 		      <li><b>Nov 15, 2018</b> - BSides Chile - PowerLess; analysis of a fileless malware with powershell</li>
 		      <li><b>Oct 31, 2018</b> - Banco BCI - Threat Hunting - there's more than meets the eye</li>
 		      <li><b>Oct 20, 2018</b> - Partyhack.cl #Fraternity - Log analysis workshop</li>
 		      <li><b>Jul 24, 2018</b> - Cybersecurityday.cl - Threat Hunting a la cacería de amenazas <a href="https://youtu.be/Ha6JM05GxmI" target="_blank">(YouTube Link)</a></li>
-              <li><b>Mar 26, 2018</b> - Webinar - An&aacute;lisis de hacking a sistemas ICS Scada en EE.UU <a href="https://www.youtube.com/watch?v=nxvdcaIbF7Q" target="_blank">(YouTube Link)</a></li>
-              <li><b>Mar 14, 2018</b> - ISC2 - Ciberinteligencia </li>
-              <li style="display: none;"><b>Nov 16, 2017</b> - BSides Chile - Threat Hunting </li>
-              <li style="display: none;"><b>Nov 11, 2017</b> - DUOC - Threat Hunting Workshop </li>
-              <li style="display: none;"><b>Jun 10, 2017</b> - Segin Chile - Desmitificando la caja negra</li>
-              <li style="display: none;"><b>May 15, 2017</b> - Webinar - El d&iacute;a en que se apagaron los computadores <a href="https://www.youtube.com/watch?v=MEB7xG2znJo" target="_blank">(YouTube Link)</a></li>
-
-            </ul>
+          <li><b>Mar 26, 2018</b> - Webinar - An&aacute;lisis de hacking a sistemas ICS Scada en EE.UU <a href="https://www.youtube.com/watch?v=nxvdcaIbF7Q" target="_blank">(YouTube Link)</a></li>
+          <li><b>Mar 14, 2018</b> - ISC2 - Ciberinteligencia </li>
+          <li style="display: none;"><b>Nov 16, 2017</b> - BSides Chile - Threat Hunting </li>
+          <li style="display: none;"><b>Nov 11, 2017</b> - DUOC - Threat Hunting Workshop </li>
+          <li style="display: none;"><b>Jun 10, 2017</b> - Segin Chile - Desmitificando la caja negra</li>
+          <li style="display: none;"><b>May 15, 2017</b> - Webinar - El d&iacute;a en que se apagaron los computadores <a href="https://www.youtube.com/watch?v=MEB7xG2znJo" target="_blank">(YouTube Link)</a></li>
+          </ul>
+        </span>
+        <button id="moretalks" onclick="moreTalks()">--- See more ---</button>
           </p>
       </div>
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Work Experience</h2>
-		<div class="w3-container">
-		  <h5 class="w3-opacity"><b>Cybersecurity Manager - Cybertrust.cl</b></h5>
-		  <h6 class="w3-text-indigo">Mar 2020 - <span class="w3-tag w3-indigo w3-round">Present</span></h6>
-		  <p>During this position I returned to one of my beloved passion, Pure-Cybersecurity Consulting. I spent the last 4 years working in cyberoperations, and now, as manager I'm in charge of a fully qualified group of Consultants and professionals with the aim to provide strategic advisory to enhance their cybersecurity capabilities in order to protect their business.</p>
-		  <p>This is a grand new challenge for me! Also i'm working with old Deloitte colleagues that were my mentors. As manager I'm in charge of the following areas:
-		  <ul class="ul-2cols">
-			<li> Strategic Cybersercurity Advisory</li>
-			<li> Secure Operation Centers (Cybertrust Center)</li>
-			<li> Data-Forensics and Threat Hunting</li>
-			<li> Incident Response Strategy</li>
-		  </ul>
-		  </p>
-		  <hr>
-		</div>
+    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Work Experience</h2>
+    <div class="w3-container">
+          <h5 class="w3-opacity"><b>Cyber Security Engineer - <a target="_blank" href="https://cornershopapp.com/es-cl/">Cornershop LLD.</a></b></h5>
+          <h6 class="w3-text-indigo">May 2021 - <span class="w3-tag w3-indigo w3-round">Present</span></h6>
+          <p>I'm working as Cyber security engineer at Cornershop by Uber. I'm part of a big team of cybersecurity professionals, with tons of capabilities! I was invited to this position to help to enhance our current cyberdefense operations, with focus in Incident Response and Threat Intelligence.</p>
+          <hr>
+    </div>
+    <div class="w3-container">
+          <h5 class="w3-opacity"><b>Senior Manager - Cybersecurity Services - <a target="_blank" href="https://www.cybertrust.cl/">Cybertrust.cl</a></b></h5>
+          <h6 class="w3-text-indigo">Mar 2020 - Apr 2021</h6>
+          <p>I was charge of all Cybersercurity services at Cybertrust: Defensive, Offensive, Intelligence and Respond. Leading a team of 25 professionals across the country. This position consisted mainly in managing comercial relationships with customers.</p>
+          <p>Even thought I learn quite a lot and acomplished big things in really short time, I learned as well that commercial and client management was just not my cup of tea. I prefer to do engineering.</p>
+          <p>Services were:
+            <ul class="ul-2cols">
+            <li> Ethical Hacking Operations</li>
+            <li> Cyberdefense and Intelligence Operations</li>
+            <li> Incident Respond Operations and Threat Hunting</li>
+            <li> Awareness Programs</li>
+            </ul>
+          </p>
+          <hr>
+    </div>
 
 		<div class="w3-container">
 		  <h5 class="w3-opacity"><b>Cybersecurity Regional Architect - LATAM / SONDA</b></h5>
