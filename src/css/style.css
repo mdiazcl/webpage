@@ -1,1 +1,23 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+    --color-background: #030712;
+    --color-primary: #A6E22E;
+    --color-secondary: #FFF;
+}
+
+html {
+    @apply text-secondary;
+}
+
+a {
+    @apply text-primary hover:underline font-bold;
+}
+
+.console-line {
+    @apply mb-2;
+}
